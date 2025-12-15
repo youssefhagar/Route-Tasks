@@ -1,5 +1,5 @@
 -- ===============================================================================
--- 1) Insert a new Manager (Best Practice: Always specify column list)
+-- 1) Insert a new Manager
 -- ===============================================================================
 
 INSERT INTO Managers (FullName, Email)
@@ -7,13 +7,9 @@ VALUES ('Ahmed Khaled', 'AhmedKhaled@Bank.com');
 
 -- ===============================================================================
 -- 2) Archive customers born before 1990 
---    Best Practices:
---      ✔ Specify column list
---      ✔ Use INSERT...SELECT for bulk operations
---      ✔ Test SELECT before INSERT
 -- ===============================================================================
 
--- Test first (recommended but optional)
+-- Test first
 SELECT Number, FullName, DateOfBirth, Email, PhoneNumber
 FROM Customers
 WHERE DateOfBirth < '1990-01-01';
@@ -36,11 +32,9 @@ WHERE DateOfBirth < '1990-01-01';
 
 -- ===============================================================================
 -- 3) Delete all transactions where Amount > 50,000
---    Best Practices:
---      ✔ Always test DELETE with SELECT first
 -- ===============================================================================
 
--- Test first (recommended but optional)
+-- Test first
 SELECT *
 FROM Transactions
 WHERE Amount > 50000;
